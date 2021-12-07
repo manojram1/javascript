@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
+  </script>
+  <script src="https://kit.fontawesome.com/be711019ed.js" crossorigin="anonymous">
+  </script>
+      <style type="text/css">
+        .container{
+           padding: 100px;
+          }
+        .card{
+          background-color:#d1e0e0;
+          padding: 40px;
+          width: 400px;
+          height: 400px;
+          }
+        .card-body{
+          text-align: center;
+          }
+        button[type="button"]{
+          position: absolute;
+          left: 20px;
+          bottom: 100px;
+          }
+      </style>
+      <script type="text/javascript">
+
+          function calc(){
+              var x=Number( document.getElementById('n1').value);
+              var y=Number(document.getElementById('n2').value);
+              var z= document.getElementById('oper').value;
+
+              if (z==='+') {
+                   z= document.getElementById('result').value= x+y;
+               }
+              else if (z==='-') {
+                   z= document.getElementById('result').value= x-y;
+               }
+              else if (z==='*') {
+                   z= document.getElementById('result').value= x*y;
+               }
+              else {
+                   z= document.getElementById('result').value= x/y;
+               }
+              }
+      </script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mx-auto">
+       <div class="card">
+           <div class="card-body">
+              <h2>CALCULATOR</h2>
+              <input type="text" name="fnum" id="n1"><br><br>
+              <input type="text" name="Snum" id="n2"><br><br>
+              <select id="oper">
+                   <option value="+">+</option>
+                   <option value="-">-</option>
+                   <option value="*">*</option>
+                   <option value="/">/</option>
+             </select><br><br>
+             <button type = "button" class = "btn btn-success" onclick="calc()">Result
+             </button>
+             <input type="text" name="result" id="result">
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
